@@ -100,25 +100,25 @@ user still needs to validate documents are correct, which is the biggest time si
 
 ## Milestones / checklist
 Week 1
-[] Plan Jotform Webhook integration + Subsequent Jotform API calls
-[] Integrate service w/ application db/service
-[] Define and implement JotForm Schema + db
-[] Define and deploy Base Application Object Store
-[] Define and deploy Application File store
+- [ ] Plan Jotform Webhook integration + Subsequent Jotform API calls
+- [ ] Integrate service w/ application db/service
+- [ ] Define and implement JotForm Schema + db
+- [ ] Define and deploy Base Application Object Store
+- [ ] Define and deploy Application File store
 Week 2
-[] Initilize Jotform DB w/ references to program
-[] Store base application PDF in Object Store
-[] Map Jotform fields to PDF fields / text boxes
-[] Test and Identify frameworks to edit PDF, prioritizing ease of adding new program pdfs
+- [ ] Initilize Jotform DB w/ references to program
+- [ ] Store base application PDF in Object Store
+- [ ] Map Jotform fields to PDF fields / text boxes
+- [ ] Test and Identify frameworks to edit PDF, prioritizing ease of adding new program pdfs
 Week 3
-[] Implement PDF editor service
-[] Update Application File Store w/ user application
-[] Store Uploaded files to Jotform in our Application File Store
-[] Design new notification email
+- [ ] Implement PDF editor service
+- [ ] Update Application File Store w/ user application
+- [ ] Store Uploaded files to Jotform in our Application File Store
+- [ ] Design new notification email
 Week 4
-[] E2E tests with cleaned real world examples (no PII)
-[] Create metrics + visibility dashboard (cloudwatch, grafana, etc.)
-[] Go live
+- [ ] E2E tests with cleaned real world examples (no PII)
+- [ ] Create metrics + visibility dashboard (cloudwatch, grafana, etc.)
+- [ ] Go live
 
 # 3 Month Release
 
@@ -138,21 +138,21 @@ This would allow us to fairly confidently add in new programs and forms quite qu
 
 ## Milestones / checklist
 Month 1: Data extraction
-[] Design accuracy tests with existing data, user data, account numbers, balances, rent, mortgage payments, etc.  Both accepted and denied
-[] Identify OCR models and run tests w/ real world data for accuracy
-[] Identify LLM models and run tests to get answers / user data for accuracy and price
-[] Extend existing PDF initial form filler w/ OCR + LLM, creating two pdfs for Starlight Staff to give feedback on
+- [ ] Design accuracy tests with existing data, user data, account numbers, balances, rent, mortgage payments, etc.  Both accepted and denied
+- [ ] Identify OCR models and run tests w/ real world data for accuracy
+- [ ] Identify LLM models and run tests to get answers / user data for accuracy and price
+- [ ] Extend existing PDF initial form filler w/ OCR + LLM, creating two pdfs for Starlight Staff to give feedback on
 Month 2: Data validation
-[] Design accuracy tests with existing data for approval and denials.  Including cases of missing user provided docs, mismatched IDs, invalid docs, etc.
-[] Design "Requirements" prompt to be extensible and follow a workflow through a JSON defined object so we can continue
-[] Test various LLMS for accuracy w/ approval / denial.  False positives are better than false negatives for us currently.
-[] Provide insights to Starlight Staff during the notification email, get feedback from staff on accuracy in the real world
-[] Assuming feedback is positive, continue to the Twilio design, else consider a redesign or using a 3rd party for things like ID match
-[] Cut over to PDFs generated on OCR + Jotform data as default
+- [ ] Design accuracy tests with existing data for approval and denials.  Including cases of missing user provided docs, mismatched IDs, invalid docs, etc.
+- [ ] Design "Requirements" prompt to be extensible and follow a workflow through a JSON defined object so we can continue
+- [ ] Test various LLMS for accuracy w/ approval / denial.  False positives are better than false negatives for us currently.
+- [ ] Provide insights to Starlight Staff during the notification email, get feedback from staff on accuracy in the real world
+- [ ] Assuming feedback is positive, continue to the Twilio design, else consider a redesign or using a 3rd party for things like ID match
+- [ ] Cut over to PDFs generated on OCR + Jotform data as default
 Month 3: Twilio workflows
-[] Design workflows for reprompting users for data, using OCR + LLM for validation.
-[] Call for a Starlight Staff if the documents don't pass validation again
+- [ ] Design workflows for reprompting users for data, using OCR + LLM for validation.
+- [ ] Call for a Starlight Staff if the documents don't pass validation again
 Stretch: LLM Based Application PDF parsing
-[] Design flow to parse PDFs into requirements
-[] Given the OCR + LLM extracted data, step through requirements filling in fields
-[] Design cache to prevent repeat parsing of application PDFs and store locations of field mappings inside the PDFs to prevent future redundant
+- [ ] Design flow to parse PDFs into requirements
+- [ ] Given the OCR + LLM extracted data, step through requirements filling in fields
+- [ ] Design cache to prevent repeat parsing of application PDFs and store locations of field mappings inside the PDFs to prevent future redundant
